@@ -1,0 +1,361 @@
+@import url('https://fonts.googleapis.com/css?family=Roboto');
+@import './main-2/variables-2.scss';
+@import './main-2/map-2.scss';
+
+
+html, body {
+    min-height: 100%;
+    background-color: $grey_background;
+}
+
+body {
+    font-family: $main_font;
+    padding: 0;
+    margin: 0;
+    color: $main_text_color;
+    font-size: 12px;
+    list-style: none;
+}
+
+h2 {
+    text-transform: uppercase;
+    text-align: center;
+    font-weight: bold;
+    font-size: 1.3rem;
+}
+
+body > div {
+    // padding: 2em;
+    // outline: 1px solid red;
+}
+
+#topmenu {
+    margin-top: 30px;
+    position: absolute;
+    background-color: white;
+    display: flex;
+    flex-direction: row;
+    justify-content: space-around;
+    margin-left: 20%;
+    margin-right: 20%;
+    height: 60px;
+    width: 60%;
+    color: $main_text_color;
+
+    @media screen and (max-width: $break-small) {
+        flex-direction: column;
+        background-color: white;
+        color: black;
+        height: 290px;
+        
+    }
+
+    
+
+
+    .logo {
+      font-family: "Open Sans", sans-serif;
+      font-weight: 700;
+      font-size: 34px;
+      margin: 0;
+      align-items: center;
+      margin-top: 10px;
+
+      @media screen and (max-width: $break-small) {
+        font-size: 13px;
+        margin-left: 10px
+    
+    }
+
+     
+    }
+
+    .spanMega {
+      color: $main_red;
+    }
+    
+    .spanRent {
+      color: $main_text_color;
+    }
+    
+    
+    
+    
+    @media screen and (max-width: $break-small) {
+        flex-direction: column;
+        width: 100%;
+    }
+
+    li {
+        display: block;
+
+        a {
+            font-size: 0.8rem;
+            text-decoration: none;
+            display: block;
+            padding: 1rem 1.5rem;
+            text-align: center;
+        }
+    }
+
+    menu {
+        list-style-type: none;
+        color: black;
+        display: flex;
+        font-size: 13px;
+        justify-content: flex-end;
+        padding: 0;
+        margin: 0;
+        align-items: center;
+        margin-top: 10px;
+  
+        
+
+        @media screen and (max-width: $break-small) {
+        flex-direction: column;
+        width: 100%;
+    }
+
+    li {
+        display: block;
+
+        a {
+            font-size: 0.8rem;
+            text-decoration: none;
+            display: block;
+            padding: 1rem 1.5rem;
+           
+            text-align: center;
+        }
+    }
+    }
+    .toggleContainer {
+        a.toogleMenu {
+            padding: 1rem;
+            text-align: left;
+            display: block;
+            img {
+                width: 0.8rem;
+                height: 0.8rem;
+            }
+        }
+    }
+
+}
+
+#cover {
+    background:  url('/public/images/task2/background.jpg') no-repeat center center;
+    background-size: cover;
+    height: 400px;
+    display: flex;
+    flex-direction: column-reverse;
+    @media screen and (max-width:) {
+        
+        height: auto;
+    }
+
+    .title {
+        color: white;
+        text-align: center;
+        background: rgba(0,0,0,0.5);
+
+        h1 {
+            font-size: 2rem;
+            font-weight: bold;
+            margin-top: 0;
+            margin-bottom: 0;
+        }
+        hr {
+            width: 40%;
+            background-color: $main_red;
+        }
+        h5 {
+            margin-top: 0;
+            font-size: 1rem;
+            font-weight: bold;
+        }
+    }
+}
+
+#submenu {
+    display: flex;
+    justify-content: center;
+    
+
+    p {
+        color: $main_text_color; 
+        display: flex;
+        font-weight: 800;
+    }
+}
+
+#images {
+    display: flex;
+    width: 100%;
+    padding: 4rem 0;
+    > div {
+        width: 20%;
+        margin: 0 auto;
+        display: flex;
+        flex-direction: column;
+        text-align: center;
+        
+    }
+    img {
+        width: 262px;
+        height: 163px;
+    }
+    button {
+        width: 165px;
+        height: 30px;
+        background-color: $main_red;
+        color: white;
+        border: none;
+
+    } 
+}
+
+#pricing {
+    padding: 4rem 0;
+    p {
+        text-align: center;
+    }
+
+    .btn {
+        display: none;
+        width: 100px;
+        border: 1px solid;
+        padding: 1rem;
+        border-radius: 2rem;
+        margin: 1rem auto;
+        cursor: pointer;
+
+        @media screen and (max-width: ) {
+            display: block;
+        }
+    }
+
+    .tableContainer {
+        
+        margin: 0 auto;
+        @media screen and (max-width: ) {
+            display: none;
+        }
+
+        table {
+            width: 100%;
+            border-collapse: collapse;
+
+            th, td {
+                padding: .4rem;
+                font-size: 0.9rem;
+            }
+            thead {
+                th.tamno {
+                    border: 1px solid ;
+                }
+                th.red {
+                    border: 1px solid ;
+                }
+            }
+            tbody {
+                th, tr {
+                    border: 1px solid ;
+                }
+            }
+            th {
+                font-weight: bold;
+            }
+            td {
+                text-align: center;
+            }
+            th.tamno {
+                
+                color: white;
+            }
+            th.red {
+                
+                color: white;
+            }
+        }
+    }
+}
+
+#contact {
+   
+    padding: 4rem 0;
+
+    > div {
+        
+        display: flex;
+        margin: 0 auto;
+        @media screen and (max-width: ) {
+            flex-direction: column;
+            width: 100%;
+            justify-content: center;
+            > div {
+                width: auto !important;
+                display: flex;
+                justify-content: center;
+
+                &.map {
+                    margin-bottom: 4rem;
+                }
+            }
+        }
+
+        .map {
+            margin: 0 4rem;
+            width: 40%;
+        }
+
+        .address {
+            width: 60%;
+        }
+
+        form {
+            
+            padding: 0.5rem;
+
+            .field {
+                padding: 0.5rem;
+                display: inline-block;
+                box-sizing: border-box;
+
+                select, textarea, input {
+                    margin: 0;
+                    width: 100%;
+                    padding: 0.4rem;
+                    box-sizing: border-box;
+                    display: block;
+                    border: 0;
+                }
+
+                &.greet {
+                    width: 39%;
+                }
+                &.name {
+                    width: 60%;
+                }
+                &.email {
+                    width: 99%;
+                }
+                &.text {
+                    width: 99%;
+                }
+            }
+        }
+    }
+}
+
+#footer {
+    text-align: center;
+
+    padding: 1rem 1.5rem;
+
+    a {
+
+        margin-left: 0.5rem;
+    }
+}
+

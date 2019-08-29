@@ -1,0 +1,2 @@
+/// <reference path="Ispit.ts" />
+

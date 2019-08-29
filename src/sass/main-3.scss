@@ -1,0 +1,290 @@
+@import url('https://fonts.googleapis.com/css?family=Roboto:400,700');
+@import url('https://fonts.googleapis.com/css?family=Baloo+Bhai');
+@import './main-3/variables.scss';
+@import './main-3/map.scss';
+
+body {
+    font-family: 'Roboto', 'Arial Narrow', Arial, sans-serif;
+    padding: 0;
+    margin: 0;
+    color: $crna;
+    font-size: 16px;
+}
+
+h1, h2, h3, h4, h5, h6 {
+    font-family: 'Baloo Bhai', 'Times New Roman', Times, serif;
+    text-align: center;
+}
+
+h2 {
+    text-transform: uppercase;
+    font-size: 2rem;
+    padding: 0 2rem;
+    @media screen and (max-width: $smallScreen) {
+        text-align: left;
+    }
+
+}
+
+h3 {
+    font-size: 1.2rem;
+}
+
+#start {
+    height: 2rem;
+    background: yellow;
+}
+
+.container {
+    margin: 0 auto;
+    max-width: $largeScreen;
+    box-sizing: border-box;
+
+    @media screen and (max-width: $middleScreen) {
+        max-width: $middleScreen;
+    }
+    @media screen and (max-width: $smallScreen) {
+        max-width: 100%;
+    }
+}
+
+section {
+    padding: 3rem 0;
+}
+
+#cover {
+    background: $crna url('/public/images/task4/hero.jpg') no-repeat center center;
+    background-size: cover;
+    height: 300px;
+    display: flex;
+    padding: 2rem 0;
+    flex-direction: column-reverse;
+
+    @media screen and (max-width: $middleScreen) {
+        height: 400px;
+        align-content: center;
+    }
+
+    @media screen and (max-width: $smallScreen) {
+        padding-top: 4rem !important;
+        background: $crna;
+        height: auto;
+    }
+
+    .title {
+        color: white;
+        text-align: center;
+        padding: 1.6rem 0;
+
+        p {
+            font-size: 1.6rem;
+            margin-top: 0;
+            margin-bottom: 0;
+            background: rgba($crna, 0.7);
+            padding: 1.6rem;
+            margin-bottom: 1.6rem;
+        }
+
+        button {
+            border: 0;
+            background: $crvena;
+            font-size: 1.4rem;
+            display: inline-block;
+            padding: 1rem 2rem;
+            color: inherit;
+            border-radius: 1rem;
+        }
+    }
+}
+
+#what {
+    background: $svetloSiva;
+
+    .items {
+        display: flex;
+        flex-direction: row;
+        flex-wrap: wrap;
+        justify-content: center;
+
+        @media screen and (max-width: $middleScreen) {
+            justify-content: start !important;
+            .item {
+                width: 46% !important;
+            }
+        }
+        @media screen and (max-width: $smallScreen) {
+            .item {
+                width: 100% !important;
+            }
+        }
+
+        .item {
+            text-align: center;
+            width: 28.33%;
+            margin: 1rem 2% 0;
+            padding: 1.5rem;
+            box-sizing: border-box;
+            border-radius: 1rem;
+            background: $svetloSiva;
+            color: $crna;
+            transition: all .4s ease;
+
+            &:hover {
+                background: $crna;
+                color: $svetloSiva;
+                .img-cont {
+                    background: $crvena;
+                }
+
+            }
+
+            .img-cont {
+                width: 6rem;
+                height: 6rem;
+                border-radius: 6rem;
+                background: $svetloSiva;
+                padding: 1.2rem;
+                margin: 1rem auto;
+                box-sizing: border-box;
+                transition: background .4s ease;
+
+                img {
+                    width: 100%;
+                    height: auto;
+                }
+            }
+            p {
+                text-align: left;
+                margin-top: 0;
+                margin-bottom: 0.2rem;
+                &.intro {
+                    text-align: center;
+                    font-weight: 700;
+                    color: $crvena;
+                }
+            }
+        }
+    }
+}
+
+#get {
+    @media screen and (max-width: $smallScreen) {
+        display: none;
+    }
+
+    p {
+        text-align: center;
+        margin-bottom: 0.2rem;
+        font-weight: 700;
+        color: $crvena;
+    }
+
+    form {
+        background-color: $svetloSiva;
+        padding: 1rem;
+        max-width: 80vw;
+        margin: 0 auto;
+        margin-top: 3rem;
+        border-radius: 1rem;
+        .field {
+            padding: 0.5rem;
+            display: inline-block;
+            box-sizing: border-box;
+
+            select,
+            textarea,
+            input {
+                margin: 0;
+                width: 100%;
+                padding: 0.4rem;
+                box-sizing: border-box;
+                display: block;
+                border: 1px solid rgba($crna, 0.5);
+                border-radius: 0.4rem;
+            }
+
+            &.greet {
+                width: 39%;
+            }
+
+            &.name {
+                width: 60%;
+            }
+
+            &.email {
+                width: 99%;
+            }
+
+            &.text {
+                width: 99%;
+            }
+        }
+        .button {
+            background: $crvena;
+            color: $svetloSiva;
+            display: block;
+            padding: 0.8rem;
+            font-size: 1.2rem;
+            text-align: center;
+            border-radius: 0 0 1rem 1rem;
+            border: 1px solid rgba($crna, 0.5);
+        }
+    }
+}
+
+#links {
+    background: $crna;
+    color: $svetloSiva;
+    .grid {
+        display: flex;
+        padding: 0 2rem;
+        @media screen and (max-width: $smallScreen) {
+            flex-direction: column-reverse;
+        }
+    }
+
+    .links-list {
+        flex-grow: 1;
+        flex-direction: row;
+        flex-wrap: wrap;
+        @media screen and (max-width: $smallScreen) {
+            margin-top: 2rem;
+        }
+
+        .header {
+            display: block;
+            width: 100%;
+            font-weight: bold;
+            @media screen and (max-width: $smallScreen) {
+                text-align: center;
+            }
+        }
+        .item {
+            display: inline-block;
+            margin-right: 1rem;
+            @media screen and (max-width: $smallScreen) {
+                display: block;
+                text-align: center;
+            }
+            &::before {
+                content: "> ";
+                color: $crvena;
+            }
+        }
+    }
+    .mapouter {
+
+    }
+}
+#footer {
+    text-align: center;
+    background-color: $crvena;
+    padding: 0.6rem 0;
+    color: $svetloSiva;
+
+    a {
+        font-weight: bold;
+        color: inherit;
+        margin-left: 0.24rem;
+    }
+}

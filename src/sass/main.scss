@@ -1,0 +1,122 @@
+$primaryColor: #eef;
+
+body {
+    background: $primaryColor;
+    font-family: Helvetica Neue, Arial Narrow, Arial, Helvetica, sans-serif;
+    font-weight: 100;
+    padding-top: 10vh;
+
+    p {
+        background: white;
+        border-radius: .8vh;
+        padding: 2vh;
+    }
+}
+
+%flexrow {
+    display: flex;
+    justify-content: space-between;
+}
+
+%flexlabel {
+    flex: 1 1 150px;
+    align-self: flex-start;
+}
+
+%flexcontrol {
+    flex: 4 1;
+}
+
+%flexhint {
+    flex: 1 0;
+}
+
+.flexNav {
+    position: fixed;
+    top:0;
+    width: 100%;
+    left: 0;
+}
+ul.flexMenu{
+    list-style-type: none;
+    padding: 1vmax 0;
+    margin: 0;
+    display: flex;
+    background: #000;
+
+    li {
+        flex: 0 0 auto;
+        padding: 1vmin;
+        color: #fff;
+        background-color: #222;
+        margin-right: 1vmin;
+        &:nth-child(1) {
+            margin-left: 1vmin;
+            margin-right: auto; /*applied only to the right*/
+        }
+    }
+}
+
+ul.flexItem {
+    margin-top: 10vh;
+    list-style-type: none;
+    margin: 0;
+    padding: .4em;
+    background: #eee;
+    max-width: 90vw;
+    margin: 0 auto;
+    @extend %flexrow;
+
+    li {
+        margin: 8px;
+        padding: .4em;
+
+        &:nth-child(1) {
+            background: #00e882;
+            @extend %flexlabel;
+        }
+        &:nth-child(2) {
+            background: #e88200;
+            @extend %flexcontrol;
+        }
+        &:nth-child(3) {
+            background: #e80082;
+            @extend %flexhint;
+        }
+    }
+}
+
+
+ul.simple {
+    height: 60vh;
+    list-style-type: none;
+    margin: 0;
+    padding: 0;
+    margin-top: 50vh;
+
+    @media screen and (min-width: 900px) {
+        & {
+            display: flex;
+            flex-direction: row;
+            flex-wrap: wrap;
+            justify-content: flex-start;
+            align-items: flex-start;
+            align-content: stretch;
+
+        }
+    }
+
+    li {
+        flex-basis: 30%;
+        min-height: 15vh;
+        background-color: #8cacea;
+        margin: .8vh;
+        padding: 2vh;
+        font-size: calc(100% + 2vw);
+
+        span {
+            color: #fff;
+            font-weight: 300;
+        }
+    }
+}
